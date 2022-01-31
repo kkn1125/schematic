@@ -1,0 +1,62 @@
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gnb{
+    [tool-tab]{
+        cursor: pointer;
+        padding: .5rem .7rem;
+    
+        &:hover{
+            box-shadow: inset 0 0 0 9999px #00000036;
+        }
+    }
+}
+
+[tool-replace]{
+    border: none;
+    background: none;
+    width: 100%;
+    min-width: 10px;
+    height: 100%;
+    cursor: pointer;
+    word-break: break-all;
+}
+
+[tool-window]{
+    position: relative;
+}
+
+[tool-picker] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    [tool-shape]{
+        &{
+            font-weight: bold;
+            border: 3px solid gray;
+            padding: 0.5rem;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &[tool-shape="box"]{
+            border-radius: 0.3rem;
+        }
+        &[tool-shape="circle"]{
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+}
+    }
+}
