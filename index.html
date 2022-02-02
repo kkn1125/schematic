@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="src/style/main.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <nav id="gnb" class="sch-gnb">
+            <div class="sch-row gap-5">
+                <span class="brand p-3">
+                    <a href="/">Schematic</a>
+                </span>
+                <ul class="sch-row sch-middle">
+                    <li class="pointer py-3 px-5 pointer" tool-tab="file">file</li>
+                    <li class="pointer py-3 px-5 pointer" tool-tab="window">window</li>
+                    <li class="pointer py-3 px-5 pointer" tool-tab="about">about</li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="app"></div>
+            <div class="middle"></div>
+            <aside class="sidebar">
+            </aside>
+        </main>
+        <footer class="bg-dark">
+            <div class="sch-col">
+                <ul class="sch-row sch-all-center">
+                    <li class="py-3 px-5 pointer"><span tool-shape="box">box</span></li>
+                    <li class="py-3 px-5 pointer"><span tool-shape="circle">circle</span></li>
+                </ul>
+                <div style="background-color: #4e4e4e; height: 2px;"></div>
+                <ul class="sch-row sch-all-center">
+                    <li class="py-3 px-5 pointer"><a href="#about">about</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="src/script/main.js" type="module"></script>
+    </body>
+
+</html>
