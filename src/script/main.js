@@ -1,28 +1,28 @@
-import {Router, Route, Layout} from '../../core/core.js'
-import router from '../../routes/router.js'
+import Schematic from './schematic.js'
 
-Object.setStyle = function(style, contents){
-    let content = new DOMParser().parseFromString(contents, 'text/html').body;
-    Object.keys(style).forEach(name=>{
-        content.querySelectorAll(name).forEach(el=>{
-            el.style.cssText = style[name];
-        });
-    });
-    return content.innerHTML;
-}
-
-Object.filter = function(obj, predicate){
-    const tmp = {};
-    Object.keys(obj).filter(predicate).map(x=>{
-        tmp[x] = obj[x];
-        return tmp;
-    });
-    return tmp;
-}
-
-Route.init({
+const schematic = Schematic.init({
     el: '#app',
-    Layout,
-    router,
+    menu: [
+        'file',
+        'window',
+        'about',
+    ],
+    initialValue: {
+        top: '15px',
+        left: '15px',
+        shape: 'box',
+        width: '150px',
+        height: '150px',
+        bgColor: 'white',
+        color: 'black',
+        opacity: 1,
+        border: {
+            use: true,
+            width: '1px',
+            type: 'solid',
+            color: 'black',
+        },
+        align: 'all', // horizon, vertical
+        contents: [],
+    },
 });
-
